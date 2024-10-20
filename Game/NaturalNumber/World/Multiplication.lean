@@ -1,14 +1,14 @@
 import Game.NaturalNumber.MyNat
+import Game.NaturalNumber.World.Tutorial
 import Game.NaturalNumber.World.Addition
 
 namespace Game.NaturalNumber.Multiplication
 
-open MyNat Addition
+open MyNat Tutorial Addition
 
 -- 1
 theorem mul_one (m : MyNat) : m * 1 = m := by
-  have h1 : 1 = succ 0 := rfl
-  rw [h1]
+  rw [one_eq_succ_zero]
   rw [mul_succ]
   rw [mul_zero, zero_add]
 
@@ -44,8 +44,7 @@ theorem one_mul (m : MyNat): 1 * m = m := by
 
 -- 6
 theorem two_mul (m : MyNat): 2 * m = m + m := by
-  have h1 : 2 = succ 1 := rfl
-  rw [h1]
+  rw [two_eq_succ_one]
   rw [succ_mul]
   rw [one_mul]
 
