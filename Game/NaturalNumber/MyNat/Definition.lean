@@ -17,7 +17,7 @@ def toNat (x : MyNat) : Nat :=
   | MyNat.zero   => Nat.zero
   | MyNat.succ b => Nat.succ (toNat b)
 
-instance instofNat {n : Nat} : OfNat MyNat n where
+instance : OfNat MyNat n where
   ofNat := ofNat n
 
 instance : ToString MyNat where

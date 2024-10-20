@@ -4,7 +4,7 @@ namespace MyNat
 
 opaque add : MyNat → MyNat → MyNat
 
-instance instAdd : Add MyNat where
+instance : Add MyNat where
   add := add
 
 axiom add_zero (a : MyNat) : a + 0 = a
