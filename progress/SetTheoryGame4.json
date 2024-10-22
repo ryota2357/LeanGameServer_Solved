@@ -1,0 +1,182 @@
+{
+  "inventory": [
+    "exact",
+    "elt",
+    "[anonymous]",
+    "sub",
+    "have",
+    "intro",
+    "imp",
+    "STG4.Subset.refl",
+    "STG4.Subset.trans",
+    "by_contra",
+    "not",
+    "rfl",
+    "comp",
+    "iff",
+    "STG4.mem_compl_iff",
+    "rewrite",
+    "rw",
+    "STG4.compl_subset_compl_of_subset",
+    "apply",
+    "push_neg",
+    "Set.Subset.antisymm",
+    "STG4.compl_compl",
+    "constructor",
+    "Iff.intro"
+  ],
+  "openedIntro": true,
+  "data": {
+    "Subset": {
+      "1": {
+        "code": "exact h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "exact h1 h2",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 12,
+            "positionLineNumber": 1,
+            "positionColumn": 12
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "have h4 : x ∈ B := h1 h3\nexact h2 h4\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "intro h3\nexact h2 (h1 h3)\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": [
+          1
+        ]
+      },
+      "5": {
+        "code": "intro x\nintro h\nexact h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "intro x h\nexact h2 (h1 h)\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 1,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      }
+    },
+    "Complement": {
+      "1": {
+        "code": "by_contra h3\nhave := h3 h1\nexact h2 this\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "rfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 1,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "intro x h2\nrewrite [mem_compl_iff A x]\nrewrite [mem_compl_iff B x] at h2 \nby_contra h3\nhave := h1 h3\nexact h2 this",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 35,
+            "positionLineNumber": 6,
+            "positionColumn": 35
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "apply Subset.antisymm\nintro x h1\nrw [mem_compl_iff Aᶜ x] at h1 \nrw [mem_compl_iff A x] at h1\npush_neg at h1\nexact h1\nintro x h1\nrw [mem_compl_iff Aᶜ x] \nrw [mem_compl_iff A x]\npush_neg\nexact h1",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 10,
+            "selectionStartColumn": 19,
+            "positionLineNumber": 10,
+            "positionColumn": 19
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "apply Iff.intro\nintro h1\nexact compl_subset_compl_of_subset h1\nintro h1\nhave h2 := compl_subset_compl_of_subset h1\nrw [compl_compl] at h2\nrw [compl_compl] at h2 \nexact h2",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 8,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 8,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      }
+    }
+  },
+  "difficulty": 2,
+  "typewriterMode": false
+}

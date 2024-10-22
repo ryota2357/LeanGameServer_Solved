@@ -1,0 +1,626 @@
+{
+  "inventory": [
+    "rfl",
+    "[anonymous]",
+    "nth_rewrite",
+    "repeat",
+    "rw",
+    "MyNat.four_eq_succ_three",
+    "MyNat.one_eq_succ_zero",
+    "MyNat.three_eq_succ_two",
+    "MyNat.two_eq_succ_one",
+    "MyNat",
+    "MyNat.add_zero",
+    "Add",
+    "MyNat.add_succ",
+    "MyNat.succ_eq_add_one",
+    "induction",
+    "MyNat.zero_add",
+    "MyNat.succ_add",
+    "MyNat.add_comm",
+    "MyNat.add_assoc",
+    "MyNat.add_right_comm",
+    "MyNat.mul_succ",
+    "MyNat.mul_zero",
+    "Mul",
+    "MyNat.mul_one",
+    "MyNat.zero_mul",
+    "MyNat.succ_mul",
+    "MyNat.mul_comm",
+    "MyNat.one_mul",
+    "MyNat.two_mul",
+    "MyNat.mul_add",
+    "MyNat.add_mul",
+    "MyNat.mul_assoc",
+    "exact",
+    "apply",
+    "MyNat.succ_inj",
+    "intro",
+    "Ne",
+    "MyNat.zero_ne_succ",
+    "MyNat.zero_ne_one",
+    "symm",
+    "MyNat.one_ne_zero",
+    "MyNat.pow_zero",
+    "Pow",
+    "MyNat.zero_pow_zero",
+    "MyNat.pow_succ",
+    "MyNat.zero_pow_succ",
+    "MyNat.pow_one",
+    "MyNat.one_pow",
+    "MyNat.pow_two",
+    "MyNat.pow_add",
+    "MyNat.mul_pow",
+    "MyNat.pow_pow",
+    "MyNat.add_sq"
+  ],
+  "openedIntro": true,
+  "data": {
+    "Tutorial": {
+      "1": {
+        "code": "rfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "rw [h]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "rw [two_eq_succ_one]\nrw [one_eq_succ_zero]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "rw [← one_eq_succ_zero]\nrw [← two_eq_succ_one]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "-- rw [add_zero]\n-- rw [add_zero]\nrepeat rw [add_zero]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "rw [add_zero c]\nrw [add_zero b]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 3,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "rw [one_eq_succ_zero]\nrw [add_succ]\nrw [add_zero]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 3,
+            "positionColumn": 9
+          }
+        ],
+        "help": [
+          0
+        ]
+      },
+      "8": {
+        "code": "rw [four_eq_succ_three] -- 2 + 2 = succ 3\nrw [three_eq_succ_two]  -- 2 + 2 = succ (succ 2)\nrw [two_eq_succ_one]    -- succ 1 + succ 1 = succ (succ (succ 1))\nrw [add_succ]           -- succ (succ 1 + 1) = succ (succ (succ 1))\nrw [← succ_eq_add_one]  -- succ (succ (succ 1)) = succ (succ (succ 1))\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "Addition": {
+      "1": {
+        "code": "induction n with d hd\nrw [add_zero]\nrfl\nrw [add_succ]\nrw [hd]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "induction b with d hd\nrw [add_zero, add_zero]\nrfl\nrw [add_succ, add_succ]\nrw [hd]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 7,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "induction b with d hd\nrw [add_zero, zero_add]\nrfl\nrw [add_succ, succ_add]\nrw [hd]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 7,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "induction a with d ih\nrw [zero_add, zero_add]\nrfl\nrw [succ_add, succ_add, succ_add]\nrw [ih]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 6,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "rw [add_assoc, add_comm b c]\nrw [add_assoc]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 3,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      }
+    },
+    "Multiplication": {
+      "1": {
+        "code": "rw [one_eq_succ_zero]\nrw [mul_succ]\nrw [mul_zero, zero_add]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "induction m with d ih\nrw [mul_zero]\nrfl\nrw [mul_succ, add_zero, ih]\nrfl\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 12,
+            "positionLineNumber": 1,
+            "positionColumn": 12
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "induction b with d ih\nrw [add_zero, mul_zero, mul_zero]\nrfl\nrw [mul_succ, mul_succ, add_succ, add_succ, ih, add_right_comm]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 5,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "induction a with d ih\nrw [mul_zero, zero_mul]\nrfl\nrw [mul_succ, succ_mul]\nrw [ih]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 6,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "rw [one_eq_succ_zero]\nrw [succ_mul]\nrw [zero_mul, zero_add]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 4,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "rw [two_eq_succ_one]\nrw [succ_mul] \nrw [one_mul]  \nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 4,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "induction b with b ih\nrw [mul_zero, zero_add, zero_add]\nrfl\nrw [succ_add, mul_succ, mul_succ]\nrw [ih, add_right_comm]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 6,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "rw [mul_comm, mul_add]\nrw [mul_comm c a, mul_comm c b]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 3,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "induction c with c ih\nrepeat rw [mul_zero]\nrfl\nrepeat rw [mul_succ]\nrw [mul_add, ih]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 6,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      }
+    },
+    "Implication": {
+      "1": {
+        "code": "exact h1\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "repeat rw [zero_add] at h\nexact h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 8,
+            "positionLineNumber": 2,
+            "positionColumn": 8
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "apply h2 at h1\nexact h1\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "rw [four_eq_succ_three] at h\nrw [← succ_eq_add_one] at h\napply succ_inj at h\nexact h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 8,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "apply succ_inj\nrw [succ_eq_add_one]\nrw [four_eq_succ_three] at h\nexact h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 8,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "intro h\nexact h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "repeat rw [← succ_eq_add_one]\napply succ_inj",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "apply h2\nexact h1\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "intro h\nrw [one_eq_succ_zero] at h \napply zero_ne_succ at h\nexact h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 28,
+            "positionLineNumber": 4,
+            "positionColumn": 28
+          }
+        ],
+        "help": []
+      },
+      "10": {
+        "code": "symm\napply zero_ne_one\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "11": {
+        "code": "repeat rw [add_succ]\nrw [add_zero]\nintro h\nrepeat apply succ_inj at h \napply zero_ne_succ at h\nexact h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 7,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "Power": {
+      "1": {
+        "code": "rw [pow_zero]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 2,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "rw [pow_succ, mul_zero]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 2,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "rw [one_eq_succ_zero]\nrw [pow_succ, pow_zero, one_mul]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 3,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "induction m with n ih\nrw [pow_zero]\nrfl\nrw [pow_succ, ih, mul_one]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 5,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "rw [two_eq_succ_one, pow_succ]\nrw [pow_one]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 3,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "induction n with k ih\nrw [add_zero, pow_zero, mul_one]\nrfl\nrw [add_succ, pow_succ, pow_succ, ih, mul_assoc]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "induction n with t ih\nrepeat rw [pow_zero]\nrw [mul_one]\nrfl\nrepeat rw [pow_succ]\nrw [ih]\nrepeat rw [mul_assoc]\nrw [mul_comm a  (_ * b)]\nrw [mul_assoc, mul_comm b a]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 21,
+            "positionLineNumber": 5,
+            "positionColumn": 21
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "induction n with n ih\nrw [mul_zero, pow_zero, pow_zero]\nrfl\nrw [pow_succ]\nrw [ih]\nrw [← pow_add, mul_succ]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 25,
+            "positionLineNumber": 6,
+            "positionColumn": 25
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "rw [two_mul]\nrepeat rw [pow_two]\nrepeat rw [mul_add]\nrepeat rw [add_mul]\nrw [mul_comm b a]\nrw [add_comm (a * b) (b * b)]\nrw [← add_assoc]\nrw [add_right_comm (a * a) (a * b) (b * b)]\nrw [add_assoc]\nrfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 7
+          }
+        ],
+        "help": []
+      },
+      "10": {
+        "code": "",
+        "completed": false,
+        "selections": [],
+        "help": []
+      }
+    }
+  },
+  "difficulty": 2,
+  "typewriterMode": false
+}
