@@ -1,4 +1,3 @@
--- import Mathlib.Tactic.ApplyAt
 import Game.NaturalNumber.MyNat
 import Game.NaturalNumber.World.Tutorial
 import Game.NaturalNumber.World.Addition
