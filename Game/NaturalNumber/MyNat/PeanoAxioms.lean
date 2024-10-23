@@ -1,4 +1,4 @@
-import Mathlib.Tactic
+import Mathlib.Tactic.Lemma
 import Game.NaturalNumber.MyNat.Definition
 
 namespace MyNat
