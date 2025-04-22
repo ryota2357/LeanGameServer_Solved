@@ -10,6 +10,8 @@ example (x : U) (A : Set U) (h : x ∈ A) : x ∈ A := by
 
 -- 2
 example (x : U) (A B : Set U) (h1 : A ⊆ B) (h2 : x ∈ A) : x ∈ B := by
+  -- apply h1
+  -- apply h2
   exact h1 h2
 
 -- 3

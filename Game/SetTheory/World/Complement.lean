@@ -8,7 +8,6 @@ variable {U : Type}
 example {A B : Set U} {x : U} (h1 : x ∈ A) (h2 : x ∉ B) : ¬A ⊆ B := by
   by_contra h3
   have := h3 h1
-  -- contradiction
   exact h2 this
 
 -- 2
