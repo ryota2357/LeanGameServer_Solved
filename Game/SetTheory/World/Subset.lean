@@ -18,7 +18,7 @@ example (x : U) (A B C : Set U) (h1 : A ⊆ B) (h2 : B ⊆ C) (h3 : x ∈ A) : x
   have h4 : x ∈ B := h1 h3
   exact h2 h4
 
--- 3
+-- 4
 example {x : U} {A B C : Set U} (h1 : A ⊆ B) (h2 : x ∈ B → x ∈ C) : x ∈ A → x ∈ C := by
   -- intro h3
   -- apply h2
@@ -26,13 +26,13 @@ example {x : U} {A B C : Set U} (h1 : A ⊆ B) (h2 : x ∈ B → x ∈ C) : x �
   intro h3
   exact h2 (h1 h3)
 
--- 4
+-- 5
 theorem refl (A : Set U) : A ⊆ A := by
   intro x
   intro h
   exact h
 
--- 5
+-- 6
 theorem trans {A B C : Set U} (h1 : A ⊆ B) (h2 : B ⊆ C) : A ⊆ C := by
   intro x h
   exact h2 (h1 h)
