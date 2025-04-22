@@ -30,7 +30,7 @@ example {x : U} {A B C : Set U} (h1 : A ⊆ B) (h2 : x ∈ B → x ∈ C) : x �
 
 -- 5
 theorem refl (A : Set U) : A ⊆ A := by
-  intro x
+  intro _
   intro h
   exact h
 
